@@ -1,0 +1,186 @@
+
+\section{Twierdzenia Hohenberga-Kohna}
+\begin{thm}
+\textbf{Hohenberga-Kohna}
+
+Istnieje jednoznaczne odwzorowanie pomiędzy potencjał zewnętrznym
+$\hat{V}_{ext}=\sum_{i=1}^{N}v_{ext}(\boldsymbol{r})$ a gęstością
+cząstek $n_{0}\left(\boldsymbol{r}\right)$ w niezdegenerowanym stanie
+podstawowym i tym samym całkowita energia układu jest wtedy jednoznacznym
+funkcjonałem gęstości $n_{0}\left(\boldsymbol{r}\right)$ . \end{thm}
+\begin{proof}
+(\textbf{1. twierdzenia H-K})
+
+Załóżmy, że istnieją dwa potencjały $\hat{V}_{ext}^{(1)}$ i $\hat{V}_{ext}^{(2)}$,
+którym odpowiada pojedyncza gęstość cząstek w stanie podstawowym $n_{0}\left(\boldsymbol{r}\right)$
+.
+
+Stan $\ket{\Psi^{(1)}}$ odpowiadający $n_{0}\left(\boldsymbol{r}\right)$
+jest stanem podstawowym z $\hat{V}_{ext}^{(1)}$, toteż z zasady wariacyjnej
+wynika:
+
+\[
+\bra{\Psi^{(1)}}\hat{H}^{(1)}\ket{\Psi^{(1)}}<\bra{\Psi^{(1)}}\hat{H}^{(2)}\ket{\Psi^{(1)}}=\bra{\Psi^{(1)}}\hat{H}^{(1)}\ket{\Psi^{(1)}}+\bra{\Psi^{(1)}}\hat{H}^{(2)}-\hat{H}^{(1)}\ket{\Psi^{(1)}}
+\]
+
+
+I analogicznie stan $\ket{\Psi^{(2)}}$ odpowiadający $n_{0}\left(\boldsymbol{r}\right)$
+jest stanem podstawowym z $\hat{V}_{ext}^{(2)}$, toteż z zasady wariacyjnej
+wynika:
+
+\[
+\bra{\Psi^{(2)}}\hat{H}^{(2)}\ket{\Psi^{(2)}}<\bra{\Psi^{(2)}}\hat{H}^{(1)}\ket{\Psi^{(2)}}=\bra{\Psi^{(2)}}\hat{H}^{(2)}\ket{\Psi^{(2)}}+\bra{\Psi^{(2)}}\hat{H}^{(2)}-\hat{H}^{(1)}\ket{\Psi^{(2)}}
+\]
+
+
+Hamiltoniany $\hat{H}^{(1)}$ i $\hat{H}^{(2)}$ różnią się tylko
+zewnętrznym potencjałem:
+
+\[
+\bra{\Psi^{(1)}}\hat{H}^{(1)}\ket{\Psi^{(1)}}<\bra{\Psi^{(1)}}\hat{H}^{(1)}\ket{\Psi^{(1)}}+\int_{\mathbb{R}^{3}}\left(V_{ext}^{(2)}\left(\boldsymbol{r}\right)-V_{ext}^{(1)}\left(\boldsymbol{r}\right)\right)n_{0}\left(\boldsymbol{r}\right)d^{3}r
+\]
+\[
+\bra{\Psi^{(2)}}\hat{H}^{(2)}\ket{\Psi^{(2)}}<\bra{\Psi^{(2)}}\hat{H}^{(2)}\ket{\Psi^{(2)}}+\int_{\mathbb{R}^{3}}\left(V_{ext}^{(1)}\left(\boldsymbol{r}\right)-V_{ext}^{(2)}\left(\boldsymbol{r}\right)\right)n_{0}\left(\boldsymbol{r}\right)d^{3}r
+\]
+
+
+Dodając stronami:
+
+\[
+\bra{\Psi^{(1)}}\hat{H}^{(1)}\ket{\Psi^{(1)}}+\bra{\Psi^{(2)}}\hat{H}^{(2)}\ket{\Psi^{(2)}}<\bra{\Psi^{(1)}}\hat{H}^{(1)}\ket{\Psi^{(1)}}+\bra{\Psi^{(2)}}\hat{H}^{(2)}\ket{\Psi^{(2)}}
+\]
+
+
+lub 
+\[
+0<\int_{\mathbb{R}^{3}}\left(V_{ext}^{(2)}\left(\boldsymbol{r}\right)-V_{ext}^{(1)}\left(\boldsymbol{r}\right)+V_{ext}^{(1)}\left(\boldsymbol{r}\right)-V_{ext}^{(2)}\left(\boldsymbol{r}\right)\right)n_{0}\left(\boldsymbol{r}\right)d^{3}r=0
+\]
+
+
+Co jest wewnętrznie sprzeczne!
+
+Stąd wniosek, że początkowe założenie jest nieprawdziwe, więc musi
+istnieć tylko jeden $\hat{V}_{ext}$ odpowiadający dokładnie jednej
+$n_{0}\left(\boldsymbol{r}\right)$.\end{proof}
+\begin{thm}
+\textbf{Hohenberga-Kohna}
+
+The functional that delivers the ground state energy of the system,
+gives the lowest energy if and only if the input density is the true
+ground state density.
+
+\textbf{Uwaga}
+
+Gęstość \textgreek{r} 0 minimalizująca całkowitą energię jest dokładną
+gęstością stanu podstawowego. A więc, dla próbnej gęstości (nieujemnej
+i całkującej się do N ) zachodzi $E\left[ \tilde{\rho} \right] \leq ­ E\left[ \rho_0 \right] = E_0$ .\end{thm}
+\begin{proof}
+2. twd. Hohenberga-Kohna
+
+W niezdegenerowanym stanie podstawowym wartość oczekiwana dowolnego
+operatora jest funkcjonałem gęstości cząstek minimalizującej energię
+stanu podstawowego. $n({\bf r})$ determines $v_{\hbox{ext}}({\bf r})$,
+$N$ and $v_{\hbox{ext}}({\bf r})$ determine $\hat{H}$ and therefore
+$\Psi$. This ultimately means $\Psi$ is a functional of $n({\bf r})$,
+and so the expectation value of $\hat{F}$ is also a functional of
+$n({\bf r})$, i.e. ${\displaystyle F[n({\bf r})]=\langle\psi\vert\hat{F}\vert\psi\rangle\,.}$
+
+A density that is the ground-state of some external potential is known
+as $v$-representable. Following from this, a $v$-representable energy
+functional $E_{v}[n({\bf r})]$ can be defined in which the external
+potential $v({\bf r})$ is unrelated to another density $n'({\bf r})$,
+\[
+E_{v}[n({\bf r})]=\int n'({\bf r})\,v_{\hbox{ext}}({\bf r})\,d{\bf r}+F[n'({\bf r})]\,
+\]
+
+
+and the variational principle asserts, 
+\[
+{\displaystyle \langle\psi'\vert\hat{F}\vert\psi'\rangle+\langle\psi'\vert\psi\rangle+\langle\psi\vert\hat{V}_{\hbox{ext}}\vert\psi\rangle\thinspace,}
+\]
+ 
+
+where $\psi$ is the wavefunction associated with the correct groundstate
+$n({\bf r})$. This leads to, 
+\[
+{\displaystyle \int n'({\bf r})\,v_{\hbox{ext}}({\bf r})\,d{\bf r}+F[n'(......;\int n({\bf r})\,v_{\hbox{ext}}({\bf r})\,d{\bf r}+F[n({\bf r})]\,,}
+\]
+
+
+and so the variational principle of the second Hohenberg-Kohn theorem
+is obtained, 
+\[
+\ensuremath{{\displaystyle E_{v}[n'({\bf r})]\,>\,E_{v}[n({\bf r})]\,.}}
+\]
+
+
+Although the Hohenberg-Kohn theorems are extremely powerful, they
+do not offer a way of computing the ground-state density of a system
+in practice. About one year after the seminal DFT paper by Hohenberg
+and Kohn, Kohn and Sham {[}9{]} devised a simple method for carrying-out
+DFT calculations, that retains the exact nature of DFT. This method
+is described next. 
+\end{proof}
+
+\section{Metoda Kohna-Shama}
+
+
+\subsection{Założenia}
+
+Założenia w metodzie Kohna-Shama:
+\begin{enumerate}
+\item Zastępujemy układ oddziałujacych cząstek w zewnętrznym potencjale
+$v_{ext}\left({\bf r}\right)$ układem pomocniczym składającym się
+z quasicząstek nieoddziałujących w pewnym efektywnym potencjale $v_{eff}\left({\bf r}\right)$.
+\item Zakładamy, że istnieje takie $v_{eff}\left({\bf r}\right)$, które
+dokładnie odwzorowuje energię stanu podstawowego układu oddziałującego.
+\item Układ nieoddziałujących cząstek jest opisany za pomocą orbitali Kohna-Shama
+(pseudofunkcji falowych) $\phi_{i}\left({\bf r}\right)$ (są to rozw.
+równania Kohna-Shama).
+\end{enumerate}
+Przy powyższych założeniach gęstość stanu podstawowego ukł. oddziałującego
+jest zadana przez
+\[
+n\left({\bf r}\right)=\sum_{i=1}^{N}\phi_{i}\left({\bf r}\right)
+\]
+
+
+
+\subsection{Funkcjonał gęstości energii Kohna-Shama}
+
+Dla hamiltonianu układu wielu ciał:
+
+Na mocy twierdzeń Hohenberga-Kohna można utworzyć funkcjonał gęstości:
+\[
+E_{HK}\left[n\right]=T\left[n\right]+\int_{\mathbb{R}^{3}}v_{ext}\left({\bf r}\right)d^{3}r+\int_{\mathbb{R}^{3}}v_{int}\left({\bf r}\right)n\left({\bf r}\right)d^{3}r
+\]
+
+
+Przy założeniach metody Kohna-Shama można ten potencjał przedstawić
+w postaci:
+
+\[
+E_{KS}\left[n\right]=T_{S}\left[n\right]+\int_{\mathbb{R}^{3}}v_{ext}\left({\bf r}\right)n\left({\bf r}\right)d^{3}r+E_{H}\left[n\right]+E_{Ion-Ion}\left[n\right]+E_{XC}\left[n\right]
+\]
+
+
+$T_{S}\left[n\right]=\int_{\mathbb{R}^{3}}\sum_{i=1}^{N}\frac{\hbar^{2}}{2m}\vert\nabla\phi_{i}\vert d^{3}r$
+- funkcjonał energii kinetycznej
+
+$E_{H}\left[n\right]=\int_{\mathbb{R}^{3}}\cdot d^{3}r$ - funkcjonał
+energii Hartree {[}UZUPELNIĆ{]}
+
+$E_{II}\left[n\right]=\text{const}$ - funkcjonał energii oddziaływania
+jon-jon
+
+$E_{XC}\left[n\right]=T\left[n\right]+\langle\hat{V}_{int}\rangle-T_{S}\left[n\right]-E_{H}\left[n\right]$
+- funkcjonał energii korelacyjno-wymiennej, w ogolności analityczna
+postać nie jest znana (gdyby była, to metoda KS byłaby metodą dokładną).
+
+
+\subsection{Równanie Kohna-Shama}
+
+
+\subsection{Hartree-Fock vs Kohn-Sham}
+
+
