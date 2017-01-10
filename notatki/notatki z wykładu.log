@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.4)  10 JAN 2017 21:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.4)  10 JAN 2017 22:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2116,6 +2116,13 @@ lmr/m/n/10 + []\OML/lmm/m/it/10 V[] [] \OT1/lmr/m/n/10 + []\OML/lmm/m/it/10 V[]
  [] \OT1/lmr/m/n/10 + []\OML/lmm/m/it/10 V[] []
  []
 
+
+Overfull \hbox (82.04047pt too wide) detected at line 21
+[] [] []\OML/lmm/m/it/10 H [] \OT1/lmr/m/n/10 = \OMS/lmsy/m/n/10 ^^@[] [] r[] ^
+^@ [] []r[] \OT1/lmr/m/n/10 + [] [] [] [] + []\OML/lmm/m/it/10 V[] [] \OT1/lmr/
+m/n/10 + []\OML/lmm/m/it/10 V[] []
+ []
+
 ) [2] (./02_approximations.tex
 Overfull \hbox (10.31197pt too wide) in paragraph at lines 14--17
  \T1/lmr/m/n/10 2.2.\T1/lmr/bx/n/10 Przybli»enie Borna-Oppenheimera.[][] \T1/lm
@@ -2158,25 +2165,25 @@ Overfull \hbox (18.48364pt too wide) in paragraph at lines 88--92
 ial is known as $\OML/lmm/m/it/10 v$\T1/lmr/m/n/10 -representable.
  []
 
-
-Overfull \hbox (6.68335pt too wide) in paragraph at lines 132--135
+[6]
+Overfull \hbox (6.68335pt too wide) in paragraph at lines 133--136
 []\T1/lmr/m/n/10 Zast¦pujemy ukªad od-dzia-ªu-ja-cych cz¡-stek w ze-wn¦trz-nym 
 po-ten-cjale $\OML/lmm/m/it/10 v[] []$
  []
 
 
-Overfull \hbox (5.26378pt too wide) in paragraph at lines 137--140
+Overfull \hbox (5.26378pt too wide) in paragraph at lines 138--141
 \T1/lmr/m/n/10 Shama (pseu-do-funk-cji fa-lo-wych) $\OML/lmm/m/it/10 ^^^[] []$ 
 \T1/lmr/m/n/10 (s¡ to rozw. rów-na-nia Kohna-Shama). 
  []
 
 
-Overfull \hbox (6.72076pt too wide) in paragraph at lines 151--152
+Overfull \hbox (6.72076pt too wide) in paragraph at lines 152--153
  \T1/lmr/m/n/10 5.2.\T1/lmr/bx/n/10 Funkcjonaª g¦-sto-±ci ener-gii Kohna-Shama.
 [][] \T1/lmr/m/n/10 Dla ha-mil-to-nianu ukªadu wielu
  []
 
-[6]) [7] (./05_DFT_types.tex) [8] (./06_pseudopotentials.tex) [9]
+) [7] (./05_DFT_types.tex) [8] (./06_pseudopotentials.tex) [9]
 (./07_band_structure.tex) [10] (./08_abinitio_dynamics.tex) [11]
 (./09_practical.tex) [12]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 79.
@@ -2189,15 +2196,15 @@ Package rerunfilecheck Info: File `"notatki z wykÅ‚adu".out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 79.
  ) 
 Here is how much of TeX's memory you used:
- 17805 strings out of 493029
- 287062 string characters out of 6136234
- 333877 words of memory out of 5000000
- 20951 multiletter control sequences out of 15000+600000
+ 17815 strings out of 493029
+ 287192 string characters out of 6136234
+ 332897 words of memory out of 5000000
+ 20956 multiletter control sequences out of 15000+600000
  63504 words of font info for 64 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  34i,7n,42p,10391b,405s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share
+ips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share
 /texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
 -mathit.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/esint-type1/esint
 10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cbfonts/grmi1000.pfb><
@@ -2212,11 +2219,12 @@ mf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr5
 ype1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></
 usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "notatki z wykÅ‚adu.pdf" (12 pages, 252741 bytes).
+onts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on "notatki z wykÅ‚adu.pdf" (12 pages, 261100 bytes).
 PDF statistics:
- 323 PDF objects out of 1000 (max. 8388607)
- 287 compressed objects within 3 object streams
- 50 named destinations out of 1000 (max. 500000)
+ 334 PDF objects out of 1000 (max. 8388607)
+ 297 compressed objects within 3 object streams
+ 55 named destinations out of 1000 (max. 500000)
  249 words of extra memory for PDF output out of 10000 (max. 10000000)
 

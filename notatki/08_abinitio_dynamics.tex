@@ -4,9 +4,28 @@
 
 \subsection{Twierdzenie Hellmana-Feynmanna}
 
+\begin{thm} \label{theorem:HellmanFeynmann}
+	Twierdzenie Feynmana-Hellmanna: pochodna energii
+	całkowitej po pewnym parametrze jest równa wartości
+	średniej pochodnej hamiltonianu po tym samym
+	parametrze:
+	$$ \frac{\partial E}{\partial \lambda} = \bra{\Psi} \frac{\partial}{\partial \lambda} \hat{H} \ket{\Psi} $$
+\end{thm}
+\begin{proof}
+	???
+\end{proof}
 
 \subsection{Obliczanie sił działających na molekuły}
-
+~\\
+Na mocy twd. \ref{theorem:HellmanFeynmann} możemy napisać, że i-ta składowa siły jest równa:
+\begin{subequations}
+\begin{equation}
+	F_i = -\frac{\partial E}{\partial X_i} = -\bra{\Psi} \frac{\partial}{\partial X_i} \hat{H} \ket{\Psi}
+\end{equation}
+\begin{equation}
+	\boldsymbol{F} = -\nabla E = \int_{\mathbb{R}^3}\Psi^*\left(\boldsymbol{r}\right) \nabla H\left(\boldsymbol{r}\right) \Psi\left(\boldsymbol{r}\right) d^3r
+\end{equation}
+\end{subequations}
 
 \subsection{Dynamika Car-Parinello}
 
