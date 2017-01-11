@@ -2,17 +2,83 @@
 
 
 \subsection{PW}
-
-
+~\\
+Rozwiązywanie równań w bazie fal płaskich:
+\begin{equation}
+\bra{\boldsymbol{r}}\ket{\boldsymbol{k}+\boldsymbol{G}} =
+\frac{1}{\sqrt{V}} e^{i\left(\boldsymbol{k}+\boldsymbol{G}\right) \cdot \boldsymbol{r}}
+\end{equation}
+gdzie $\boldsymbol{G}$ wektor sieci odwrotnej spefłniający warunek $\frac{\hbar^2}{2m_e}\vert\boldsymbol{k}+\boldsymbol{G}\vert^2 \leq E_{\text{cut}}$
 \subsection{OPW}
+~\\
 
 
 \subsection{APW}
+~\\
 
 
 \subsection{LCAO}
+~\\
+Szukamy rozwiązania w kostaci funkcji Blocha.
+$$
+\Psi_{n\boldsymbol{k}}\left(\boldsymbol{r}\right) = 
+\frac{1}{\sqrt{N}} \sum_{\mu} c_{n\mu}\left(\boldsymbol{k}\right) \Phi_{\boldsymbol{k}\mu}\left(\boldsymbol{r}\right)
+$$
+Funkcja LCAO:
+$$
+\Phi_{\boldsymbol{k}\mu}\left(\boldsymbol{r}\right) = \frac{1}{\sqrt{N}} \sum_j e^{i\boldsymbol{k}\cdot\boldsymbol{R}_j} R_{\mu l}(\vert\boldsymbol{r}-\boldsymbol{R}_j\vert) Y_{lm}\left(\theta,\phi\right)
+$$
+Razem funkcję falową rozwijamy w bazie:
+$$
+\Psi_{n\boldsymbol{k}}\left(\boldsymbol{r}\right) = \frac{1}{N} \sum_{\mu} \sum_{j}
+c_{n\mu}\left(\boldsymbol{k}\right) e^{i\boldsymbol{k}\cdot\boldsymbol{r}}
+\underset{\text{orbitale atomowe}}{\underbrace{
+		R_{\mu l}(\vert\boldsymbol{r}-\boldsymbol{R}_j\vert) Y_{lm}\left(\theta,\phi\right)
+}}
+$$
+Funkcje radialne spełniają równanie:
+$$
+\left[ -\frac{1}{2} \frac{1}{r} \frac{d^2}{d^2r} r + \frac{1}{2} \frac{\ell(\ell-1)}{r^2} + V_{\mu\ell}(r)\right] R_{\mu \ell}(r) = \left(\varepsilon_{\ell} + \delta \varepsilon_{\ell}\right) R_{\mu \ell}(r)
+$$
+Dla każdego orbitalu musimy określić zasięg bazy, co można zrobić wprowadzając przesunięcie energii $\delta \varepsilon_{\ell}$.
+
+Otrzymana baza nie jest ortonormalna, nie mniej jednak możemy rozwiązać metodą Ritza:
+\begin{equation}
+\sum_{\nu} H_{\mu\nu} c_{n\mu}\left(\boldsymbol{k}\right) = E_{n}\left(\boldsymbol{k}\right) \sum_{\mu} S_{\mu\nu} c_{n\mu}\left(\boldsymbol{k}\right)
+\end{equation}
+$\nu$ indeksuje składowe wektorów własnych.
+
+Konstrukcja bazy LCAO:
+\begin{itemize}
+	\item Minimalny rozmiar bazy – \textbf{„single-$\zeta$” (SZ)} – jedna funkcja radialna na jedną zapełnioną powłokę ze względu na moment pędu
+	\item Możliwości zwiększenia rozmiaru bazy – zwiększenie ilości funkcji radialnych \textbf{„multiple-$\zeta$” (DZ,DZP)} lub dodanie orbitali o różnym $\ell$ („polarization”)
+\end{itemize}
 
 
+\newpage
 \subsection{Porównanie metod}
+~\\
+\begin{multicols}{2}
+PW:
 
+APW:
+\begin{itemize}
+	\item połączenie metod PW i LCAO
+	\item 
+\end{itemize}
+
+OPW:
+
+LCAO:
+\begin{itemize}
+	\item Używają pseudopotencjałów
+	\item Bazą funkcji falowej jest zbiór orbitali atomowych
+	\item Opis „zlokalizowany” – w duchu chemii kwantowej
+	\item Wysoka wydajność
+	\item Problemy ze zbieżnością
+	\item Główne cechy bazy: wielkość, zakres orbitali, kształt
+	\item Numeryczne orbitale atomowe (NAO) to rozwiązania numeryczne zagadnienia K-S dla izolowanego (pseudo-) atomu
+\end{itemize}
+
+\end{multicols}
 

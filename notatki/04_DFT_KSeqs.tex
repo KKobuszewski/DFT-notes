@@ -122,6 +122,15 @@ DFT calculations, that retains the exact nature of DFT. This method
 is described next. 
 \end{proof}
 
+\subsection{Konsekwencje twierdzeń H-K}
+~\\
+\begin{enumerate}
+	\item Zmiana w zewnętrznym potencjale pociąga za sobą zmianę w gęstości rozkładu cząstek
+	$$ \int_{\mathbb{R}^3} \delta v_{ext}\left(\boldsymbol{r}\right) \delta n\left(\boldsymbol{r}\right) d^3r > 0 $$
+	\item Dla systemu Coulombowskiego wszystkie parametry układu mogą zostać wyznaczone przy znajomości gęstości elektronowej, tzw. twierdzenie Kato:
+	$$ Z_k = - \frac{a_B}{2 n\left(\boldsymbol{r}\right)} \frac{dn\boldsymbol{r}}{d\boldsymbol{r}} \vert_{\boldsymbol{r} \to \boldsymbol{R}_k}$$
+\end{enumerate}
+
 \newpage
 \section{Metoda Kohna-Shama}
 
@@ -156,30 +165,38 @@ Na mocy twierdzeń Hohenberga-Kohna można utworzyć funkcjonał gęstości:
 E_{HK}\left[n\right]=T\left[n\right]+\int_{\mathbb{R}^{3}}v_{ext}\left({\bf r}\right)d^{3}r+\int_{\mathbb{R}^{3}}v_{int}\left({\bf r}\right)n\left({\bf r}\right)d^{3}r
 \]
 
-
-Przy założeniach metody Kohna-Shama można ten potencjał przedstawić
-w postaci:
+Wyrażenie na energię całkowitą układu otrzymaną metodą Hartree-Focka można porównać z enegią otrzymaną z funkcjonału Hohenberga-Kohna. Przy założeniach metody Kohna-Shama można dzięki temu przedstawić funkcjonał Hohenberga-Kohna w postaci:
 
 \[
 E_{KS}\left[n\right]=T_{S}\left[n\right]+\int_{\mathbb{R}^{3}}v_{ext}\left({\bf r}\right)n\left({\bf r}\right)d^{3}r+E_{H}\left[n\right]+E_{Ion-Ion}\left[n\right]+E_{XC}\left[n\right]
 \]
 
+Gęstość elektronową rozbijamy na quasispinorbilate: $n\left(\boldsymbol{r}\right) = \sum_i \vert\phi_i\vert^2\left(\boldsymbol{r}\right)$
 
-$T_{S}\left[n\right]=\int_{\mathbb{R}^{3}}\sum_{i=1}^{N}\frac{\hbar^{2}}{2m}\vert\nabla\phi_{i}\vert d^{3}r$
-- funkcjonał energii kinetycznej
+$T_{S}\left[n\right]=\int_{\mathbb{R}^{3}}\sum_{i=1}^{N}\frac{\hbar^{2}}{2m}\vert\nabla\phi_{i}\vert d^{3}r$ - funkcjonał energii kinetycznej nieoddziałujących cząstek
 
-$E_{H}\left[n\right]=\int_{\mathbb{R}^{3}}\cdot d^{3}r$ - funkcjonał
-energii Hartree {[}UZUPELNIĆ{]}
+$E_{H}\left[n\right]=\frac{e^2}{2}\int_{\mathbb{R}^{3}}\int_{\mathbb{R}^{3}}\frac{n\left(\boldsymbol{r}\right)n\left(\boldsymbol{r}'\right)}{\vert\boldsymbol{r} - \boldsymbol{r}'\vert}\cdot d^{3}r'd^{3}r$ - funkcjonał energii Hartree {[}UZUPELNIĆ{]}
 
-$E_{II}\left[n\right]=\text{const}$ - funkcjonał energii oddziaływania
-jon-jon
+$E_{II}\left[n\right]=
+\int_{\mathbb{R}^3} V_{I-I}\left(\boldsymbol{r}\right) n\left(\boldsymbol{r}\right)d^{3}r = \text{const}$ - funkcjonał energii oddziaływania jon-jon
 
 $E_{XC}\left[n\right]=T\left[n\right]+\langle\hat{V}_{int}\rangle-T_{S}\left[n\right]-E_{H}\left[n\right]$
 - funkcjonał energii korelacyjno-wymiennej, w ogolności analityczna
-postać nie jest znana (gdyby była, to metoda KS byłaby metodą dokładną).
+postać nie jest znana (gdyby była, to metoda KS byłaby metodą dokładnie odwzorowującą stan podstawowy układu).
 
 
 \subsection{Równanie Kohna-Shama}
+~\\
+Nakładając warunek minimalizacji energii przy ustalonej liczbie cząstek możena wyprowadzić równanie Kohna-Shama na quasi-orbital jednocząstkowy:
+\begin{subequations}
+\begin{equation}
+\frac{\delta E_{KS}[n]}{\delta n}\left(\boldsymbol{r}\right) - \mu \int_{\mathbb{R}^3} n\left(\boldsymbol{r}\right) d^3r = \frac{\delta E_{KS}[n]}{\delta n}\left(\boldsymbol{r}\right) - \mu \int_{\mathbb{R}^3} \sum_{j} \vert\phi_j\vert^2 \left(\boldsymbol{r}\right) d^3r = 0
+\end{equation}
+Stąd po rozseparowaniu na pojedyncze spinorbitale:
+\begin{equation}
+\left[\right]\phi_i\left(\boldsymbol{r}\right) = \varepsilon_i \phi_i \left(\boldsymbol{r}\right)
+\end{equation}
+\end{subequations}
 
 
 \subsection{Hartree-Fock vs Kohn-Sham}

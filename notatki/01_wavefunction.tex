@@ -1,24 +1,49 @@
 \section{Wielociałowa funkcja falowa}
 
-Wielociałowa funkcja falowa
+\subsection{Wielociałowa funkcja falowa}
+~\\
+Zakładamy, że jeżeli zamienimy i-tą cząstkę z j-tą cząstką to możemy jedynie zmienić fazę funkcji falowej układu (wartości oczekiwane się nie zmienią):
+$$ \Psi\left(\boldsymbol{r}_{1},\boldsymbol{r}_{2},\ldots,\boldsymbol{r}_{i},\ldots,\boldsymbol{r}_{j},\ldots,\boldsymbol{r}_{N}\right)=e^{i\theta}\Psi\left(\boldsymbol{r}_{1},\boldsymbol{r}_{2},\ldots,\boldsymbol{r}_{j},\ldots,\boldsymbol{r}_{i},\ldots,\boldsymbol{r}_{N}\right)
+$$
 
-Katastrofa van Vlecka
+Dodatkowo permutacja cząstek w funkcji falowej nie powinna wpływać na wartości oczekiwane (w końcu cząstki są nierozróżnialne!)
+$$\bra{\Psi}\hat{O}\ket{\Psi}=\text{{const}}\implies e^{2i\theta}=1\implies e^{i\theta}=\pm1$$
 
-Gęstość elektronowa
 
+Rozróżniamy cząstki, ktore mają „+” (bozony) i „-” (fermiony). Funkcja falowa zatem musi spełniać warunki symetryczności/antysymetryczności -> permanent/wyznacznik Slatera.
+
+Dla fermionów wyznacznik Slatera:
+$$
+\psi_{i_{1},i_{2},\ldots,i_{N}}=\left\vert \begin{array}{ccccc}
+\phi_{i_{1}}\left(\boldsymbol{r}_{1}\right) & \phi_{i_{1}}\left(\boldsymbol{r}_{2}\right) & \cdots & \phi_{i_{1}}\left(\boldsymbol{r}_{N-1}\right) & \phi_{i_{1}}\left(\boldsymbol{r}_{N}\right)\\
+\phi_{i_{2}}\left(\boldsymbol{r}_{1}\right) & \phi_{i_{2}}\left(\boldsymbol{r}_{2}\right) & \cdots & \phi_{i_{2}}\left(\boldsymbol{r}_{N-1}\right) & \phi_{i_{2}}\left(\boldsymbol{r}_{N}\right)\\
+\vdots & \vdots & \ddots & \vdots & \vdots\\
+\phi_{i_{N-1}}\left(\boldsymbol{r}_{1}\right) & \phi_{i_{N-1}}\left(\boldsymbol{r}_{2}\right) & \cdots & \phi_{i_{N-1}}\left(\boldsymbol{r}_{N-1}\right) & \phi_{i_{N-1}}\left(\boldsymbol{r}_{N}\right)\\
+\phi_{i_{N}}\left(\boldsymbol{r}_{1}\right) & \phi_{i_{N}}\left(\boldsymbol{r}_{2}\right) & \cdots & \phi_{i_{N}}\left(\boldsymbol{r}_{N-1}\right) & \phi_{i_{N}}\left(\boldsymbol{r}_{N}\right)
+\end{array}\right\vert 
+$$
+
+\subsection{Katastrofa van Vlecka}
+~\\
+Ilość możliwych kombinacji orbitali w orbitalach Slatera rośnie wykładniczo z liczbą cząstek, a by uzyskać sensowne rozkłady funkcji falowej w bazie wyznaczników Slatera potrzebujemy ich b. dużo -> pamięć potrzebna na zmagazynowanie tego jest większa niż ilość at. we Wszechświecie...\\
+Sensowniej jest posługiwać się gęstością elektronową, dwucząstkowymi macierzami gęstości, funkcjami koralecji, a więc tworami, które łatwiej użyć do obliczania fizycznych wartości makroskopowych.\\
+Potrzebne są metody do efektywnego obliczania tych wielkości bez rozpatrywania całej funkcji falowej.\\
+
+\subsection{Gęstość elektronowa}
+~\\
+Gęstość elektronowa niesie tyle samo informacji o energii stanu co funkcja falowa
+
+\begin{equation}
+n\left(\boldsymbol{r}\right) = \sum_{\sigma} n_{\sigma}\left(\boldsymbol{r}\right) = \sum_{\sigma_2,\ldots,\sigma_3}\int_{\mathbb{R}^{3(N-1)}} \vert \Psi \left(\boldsymbol{r}\sigma,\boldsymbol{r}_2\sigma_2,\ldots,\boldsymbol{r}_N\sigma_N\right) \vert^2 d^3r_2 \cdot \ldots \cdot d^3r_N
+\end{equation}
+
+\subsection{Hamiltonian pełny}
+~\\
 Hamiltonian układu w problemach ciała stałego:
-
 \[
 \hat{H}=\hat{T}_{e}\left(\nabla_{\boldsymbol{r}_{i}}\right)+\hat{T}_{jon}\left(\nabla_{\boldsymbol{R}_{i}}\right)+\hat{V}_{ext}\left(\boldsymbol{r}_{i},\boldsymbol{R}_{j}\right)+\hat{V}_{jon-jon}\left(\boldsymbol{R}_{i}-\boldsymbol{R}_{j}\right)+\hat{V}_{e-jon}\left(\boldsymbol{r}_{i}-\boldsymbol{R}_{j}\right)+\hat{V}_{e-jon}\left(\boldsymbol{r}_{i}-\boldsymbol{r}_{j}\right)
 \]
 
-\begin{equation}
-\bra{\boldsymbol{r}}\hat{H}\ket{\boldsymbol{r}}=-\frac{\hbar^2}{2 m_e} \sum_{i=1}^{N_e} \nabla_{\boldsymbol{r}_{i}}
--\sum_{I=1}^{N_{jon}} \frac{\hbar^2}{2 M_I} \nabla_{\boldsymbol{R}_{I}}+
-\frac{1}{2}\sum_{I=1}^{N_{jon}}\sum_{J=1}^{N_{jon}}\left(\boldsymbol{R}_{i}-\boldsymbol{R}_{j}\right)+
-\hat{V}_{e-jon}\left(\boldsymbol{r}_{i}-\boldsymbol{R}_{j}\right)+
-\hat{V}_{e-jon}\left(\boldsymbol{r}_{i}-\boldsymbol{r}_{j}\right)
-\end{equation}
 
 
 Rozkłada się na energię kinetyczną elektronów, jonów (najczęściej
@@ -26,3 +51,14 @@ jąder/rdzeni atomowych), jednocząstkową energię potencjalną działającą
 na cząstki (np. grawitacja) oraz operatory dwucząstkowe przedstawiające
 wzajenmne oddziaływania cząstek na siebie.
 
+W bazie położeń hamiltonian ciała stałego można rozpisać:
+
+\begin{equation}
+\bra{\boldsymbol{r}}\hat{H}\ket{\boldsymbol{r}}=-\frac{\hbar^2}{2 m_e} \sum_{i=1}^{N_e} \nabla_{\boldsymbol{r}_{i}}-
+\sum_{I=1}^{N_{jon}} \frac{\hbar^2}{2 M_I} \nabla_{\boldsymbol{R}_{I}}+
+\frac{1}{2}\sum_{I \neq J}^{N_{jon}} \frac{Z_I Z_J e^2}{\left\vert\boldsymbol{R}_{i}-\boldsymbol{R}_{j}\right\vert}+
+\frac{1}{2}\sum_{i \neq j}^{N_{e}} \frac{ e^2}{\left\vert\boldsymbol{R}_{i}-\boldsymbol{R}_{j}\right\vert}-
+\sum_{i}^{N_{e}}\sum_{I}^{N_{jon}} \frac{Z_I e^2}{\left\vert\boldsymbol{r}_{i}-\boldsymbol{R}_{I}\right\vert}
+\end{equation}
+
+Nie ma zewnętrznego potencjału, układ jest samozwiązany.

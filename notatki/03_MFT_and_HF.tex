@@ -3,9 +3,29 @@
 
 \subsection{Przybliżenie pola średniego}
 
-???
-
+~\\
+Energię potencjalną oddziaływania elektronów między sobą zastępujemy samouzgodnionym polem średnim
+$$ V_{e-e}\left(\boldsymbol{r}_i,\boldsymbol{r}_i\right) = \frac{1}{2}\sum_{i \neq j}^{N_{e}} \frac{ e^2}{\left\vert\boldsymbol{r}_{i}-\boldsymbol{r}_{j}\right\vert} \mapsto U_{scf}\left(\boldsymbol{r}_i\right) = \sum_{j}^{N_{e}} e^2 \int_{\mathbb{R}^3} \frac{ \vert\psi_j\vert^2\left(\boldsymbol{r}'\right) }{\left\vert\boldsymbol{r}_{i}-\boldsymbol{r}'\right\vert} d^3r' $$
+W efekcie otrzymujemy tylko operatory jednocząstkowe i równania stają się rozwiązywalne numerycznie.
 
 \subsection{Równania Hartree-Focka}
+~\\
+Przybliżenie średniego pola dla funkcji falowej w postaci wyznacznika Slatera oraz z uwzględnieniem korelacji elektronowych (człon wymienny).
 
-Hartree-Focka-Bogoliubowa
+Na orbitale jednoelektronowe otrzymujemy równania:
+\begin{equation}
+\left[
+-\frac{\hbar^2}{2m_e} \nabla + V_{ext}\left(\boldsymbol{r}\right) +
+\underset{E_\text{Hartree}}{\underbrace{
+\sum_{j=1}^{N_e} e^2 \int_{\mathbb{R}^3} \frac{\psi^*_j\left(\boldsymbol{r}'\right) \psi_j\left(\boldsymbol{r}'\right)}{\vert \boldsymbol{r} - \boldsymbol{r}' \vert} d^3r'}} -
+\underset{E_\text{Exchange}}{\underbrace{
+\sum_{j=1}^{N_e} e^2 \int_{\mathbb{R}^3} \frac{\psi_j\left(\boldsymbol{r}\right)}{\psi_i\left(\boldsymbol{r}\right)} \frac{\psi_j\left(\boldsymbol{r}'\right) \psi_i\left(\boldsymbol{r}'\right)}{\vert \boldsymbol{r} - \boldsymbol{r}' \vert} d^3r'		
+	}}
+\right]
+\psi_i\left(\boldsymbol{r}\right) = \varepsilon_i \psi_i \left(\boldsymbol{r}\right)
+\end{equation}
+Obliczanie metodą self-consistent field SCF.\\
+Potem można wstawić do w. Slatera i stąd policzyć gęstość elektronową.
+
+Przybliżenie Hartree -> bez członu wymiennego.\\
+Hartree-Focka-Bogoliubowa\\

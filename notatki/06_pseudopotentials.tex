@@ -1,3 +1,35 @@
 \section{Metoda pseudopotencjałów}
 
+\subsection{Postawienie problemu}
+~\\
+Rdzenie atomowe mają często dużo niższe energie poziomów energetycznych, więc bez sensowne jest oddzielanie ich od jądra atomowego. Dodatkowo w głębokiej studni potencjału (potencjał Coulombowski rdzenia jest osobliwy w środku jądra), funkcja falowo szybko oscyluje i potrzebna jest bardzo duża baza fal plaskich (inne też), by ją prawdiłowo opisać.\\
+Czy można znaleźć taki potencjał $V^{\text{pseudo}}_{\mu\ell}(r)$ by opisać układ elektronów z wyższych orbitali (pasm) oddziałujących z rdzeniami atomowymi (jądro + głęboko położone elektrony), a by jakościowo oraz ilościowo odtwarzał problem dla wszystkich elektronów?\\
+\begin{subequations}
+\begin{equation} \label{eq:pseudo1}
+\left[ -\frac{1}{2} \frac{1}{r} \frac{d^2}{d^2r} r + \frac{1}{2} \frac{\ell(\ell-1)}{r^2} + V^{\text{all e}}_{\mu\ell}(r)\right] R^{\text{all e}}_{\mu \ell}(r) = \left(\varepsilon_{\ell} + \delta \varepsilon_{\ell}\right) R^{\text{all e}}_{\mu \ell}(r)
+\end{equation}
+\begin{equation} \label{eq:pseudo2}
+\left[ -\frac{1}{2} \frac{1}{r} \frac{d^2}{d^2r} r + \frac{1}{2} \frac{\ell(\ell-1)}{r^2} + V^{\text{pseudo}}_{\mu\ell}(r)\right] R^{\text{pseudo}}_{\mu \ell}(r) = \left(\varepsilon_{\ell} + \delta \varepsilon_{\ell}\right) R^{\text{pseudo}}_{\mu \ell}(r)
+\end{equation}
+\end{subequations}
 
+\subsection{Warunki na pseudopotencjał}
+~\\
+\begin{enumerate}
+	\item Dla pewnej („referencyjnej”) konfiguracji, wartości własne (energie) funkcji AE $R^{\text{all e}}_{\mu \ell}(r)$ i pseudo $ R^{\text{pseudo}}_{\mu \ell}(r)$ muszą się zgadzać.
+	\item Funkcje falowe muszą być równe powyzej $r>r_{cut}$
+	\item Pochodna logarytmiczna obu funkcji musi być równa dla $r_c$ 
+	$$
+	r_c\frac{{R^{\text{pseudo}}_{\mu \ell}}^{'}(r_c)}{R^{\text{pseudo}}_{\mu \ell}(r_c)} =
+	\boxed{
+	r_c \frac{d}{dr} \ln{R^{\text{pseudo}}_{\mu \ell}(r_c)} = 
+	r_c \frac{d}{dr} \ln{R^{\text{all e}}_{\mu \ell}(r_c)} = 
+	}
+	r_c\frac{{R^{\text{all e}}_{\mu \ell}}^{'}(r_c)}{R^{\text{all e}}_{\mu \ell}(r_c)}
+	$$
+	\item Całkowity ładunek wewnątrz sfery $r_c$ musi być zachowany
+	$$ \boxed{
+	Q = e^2 \int_{0}^{r_c} r^2 R^{\text{all e}}_{\mu \ell}(r) =
+	e^2 \int_{0}^{r_c} r^2 R^{\text{pseudo}}_{\mu \ell}(r) }
+	$$
+\end{enumerate}
